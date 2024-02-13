@@ -15,23 +15,21 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    emailjs
-      .send("service_iwtg0ga", "template_v8sjwh1", values, "RGZGJ9e24vn_ShfG3")
-      .then(
-        (response) => {
-          console.log("SUCCESS!", response);
-          setValues({
-            fullName: "",
-            email: "",
-            role: "",
-            message: "",
-          });
-          setStatus("SUCCESS");
-        },
-        (error) => {
-          console.log("FAILED...", error);
-        }
-      );
+    emailjs.send("secret_", "template_secret", values, "oublic_secret").then(
+      (response) => {
+        console.log("SUCCESS!", response);
+        setValues({
+          fullName: "",
+          email: "",
+          role: "",
+          message: "",
+        });
+        setStatus("SUCCESS");
+      },
+      (error) => {
+        console.log("FAILED...", error);
+      }
+    );
   };
 
   useEffect(() => {
