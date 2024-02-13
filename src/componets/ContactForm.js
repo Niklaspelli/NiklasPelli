@@ -16,7 +16,7 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     emailjs
-      .send("secret_id", "template_secret", values, "secret_public_key")
+      .send("service_iwtg0ga", "template_v8sjwh1", values, "RGZGJ9e24vn_ShfG3")
       .then(
         (response) => {
           console.log("SUCCESS!", response);
