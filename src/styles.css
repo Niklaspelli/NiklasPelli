@@ -1,0 +1,379 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(#111111, #292929);
+  background-size: cover;
+  color: orange;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  margin: 1rem;
+  text-align: center;
+}
+
+.nav {
+  background-color: #0a0a0a;
+  color: orange;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.site-title {
+  font-size: 2rem;
+
+}
+
+.nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav a {
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: .25rem;
+}
+.nav li:active {
+  background-color: #1e1b1b;
+}
+
+.nav li:hover {
+  background-color: #171616;
+}
+
+.--text-center {
+  text-align: center;
+}
+
+.--card {
+  border: 1px solid transparent;
+  border-radius: 5px;
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+}
+
+.--btn {
+  font-size: 1.6rem;
+  font-weight: 400;
+  padding: 6px 8px;
+  margin: 0 5px 0 0;
+  border: 1px solid orange;
+  border-radius: 10px;
+  background: black;
+  color: orange;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+}
+
+.--btn:hover {
+  transform: translateY(-2px);
+}
+
+.--btn-lg {
+  padding: 8px 10px;
+}
+
+.--btn-block {
+  width: 100%;
+}
+
+.--btn-primary {
+  color: #fff;
+  background: #007bff;
+}
+.--btn-secondary {
+  color: #fff;
+  border: 1px solid #fff;
+  background: transparent;
+}
+.--btn-danger {
+  color: #fff;
+  background: orangered;
+}
+
+.--btn-success {
+  color: #fff;
+  background: #28a745;
+}
+
+/* Background */
+.--bg-light {
+  background: #fff;
+}
+.--bg-dark {
+  background: var(--color-dark);
+}
+.--bg-primary {
+  background: var(--color-primary);
+}
+.--bg-success {
+  background: var(--color-success);
+}
+.--bg-grey {
+  background: var(--color-grey);
+}
+
+.--form-control {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.--form-control > * {
+  margin: 5px 0;
+}
+.--form-control input {
+  font-size: 1.6rem;
+  font-weight: 300;
+  padding: 8px 1rem;
+  border: 1px solid #777;
+  border-radius: 3px;
+  outline: none;
+}
+.--form-control select {
+  font-size: 1.4rem;
+  font-weight: 400;
+  padding: 8px 1rem;
+  border: 1px solid orange;
+  border-radius: 3px;
+}
+
+.--form-control label {
+  font-size: 1.6rem;
+  font-weight: 300;
+  display: inline-block;
+  min-width: 7rem;
+  color: var(--color-dark);
+  margin-right: 1rem;
+}
+label{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color:white; 
+    
+}
+section {
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Flex */
+.--flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.--flex-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.--flex-end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.--flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.--dir-column {
+  flex-direction: column;
+}
+
+.--flex-dir-column {
+  display: flex;
+}
+
+textarea {
+  resize: none;
+}
+
+
+footer {
+ position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 0.25em;
+  background-color: #0a0a0a;
+  
+  scroll-padding-block-end: 100%;
+}
+
+
+.fa-brands{
+  color: orange;
+  font-size:3rem; 
+  text-align: center;
+  position: relative;
+  left: 45%;
+  margin: 10px;
+}
+.fa-brands:hover{
+  box-shadow: 0 0 5px 3px rgba(147, 9, 9, 0.5);
+  transform:scale(1.2);                              /* Här har jag lagt en liten hover-förstorning på ikonerna */
+}
+.fontawesome{
+  text-align: center;  
+}
+
+h1{
+  font-size: 60px;
+}
+
+.typer{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 2rem;
+  transform: translate(-50%, -50%);
+  width: 26ch;
+  animation: typing 7s steps(26), blink 1s ease-in-out infinite;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 4px solid orange;
+
+}
+
+@keyframes typing {
+  from {
+width: 0ch;
+  }
+  to {
+    width: 26ch;
+  }
+}
+
+@keyframes blink {
+  from{
+    border-right: 4px solid orange;
+  }
+  to {
+    border-right: 4px solid rgb(40, 39, 39);
+  }
+}
+
+.img{
+  display:flex;
+  width: 400px;
+  height: 500px;
+  border-radius: 10%;
+  padding: 20px;
+}
+.card-bg{
+  width: 320px;
+  height:365px;
+  animation-name: slideInLeft;
+  animation-duration: 1s;
+  margin: 0;  
+ 
+ 
+}
+
+.container2 {
+  background-color: #0a0a0a;
+  border-radius: 10px;
+  
+}
+
+.card-container{
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, 330px);
+  align-items: center;   
+}
+
+.card-bg, .card-bg-kontakt {   /* Här har jag optimerat koden till alla cards! */
+  
+  position:relative;
+  top: 0;
+  background-color: rgb(23, 22, 22);
+  padding: 20px;
+  opacity: 95%;
+  box-shadow: 15px 15px #523102;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.glow {
+  
+  margin: 50px;
+  font-size: 70px;
+  color: #292929;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+.flexbox{
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
+.code-lang{
+  position: absolute;
+  top: 70%;
+  font-family: monospace;
+  font-size: 25px;
+  margin: 5px;
+  opacity: 20%;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #934305, 0 0 40px #b97113, 0 0 50px #bc2811, 0 0 60px #c05a0c, 0 0 70px #ee1212;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #a65252, 0 0 30px #ad5918, 0 0 40px #cb4210, 0 0 50px #db4711, 0 0 60px #363335, 0 0 70px #dbb708, 0 0 80px #131112;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+      transform: translateX(-300px)       
+  }
+  to {
+      transform: translateX(0)
+  }
+}
+
+@media screen and (min-width: 360px) {
+
+  .flexbox{
+      place-content: center;  
+  }
+  
+}
+
+
+.popup{
+
+ color: green;
+ 
+}
