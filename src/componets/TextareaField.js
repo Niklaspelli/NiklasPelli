@@ -1,7 +1,7 @@
 const TextareaField = (props) => {
   const { handleChange, label, name, value } = props;
   return (
-    <div>
+    <section>
       <label htmlFor={name}>{label}</label>
       <textarea
         onChange={handleChange}
@@ -12,7 +12,7 @@ const TextareaField = (props) => {
       >
         Your message
       </textarea>
-    </div>
+    </section>
   );
 };
 

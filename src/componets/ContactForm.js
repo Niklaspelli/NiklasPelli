@@ -15,7 +15,7 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    emailjs.send("secret_", "template_secret", values, "oublic_secret").then(
+    emailjs.send("service_secret", "template_secret", values, "secret").then(
       (response) => {
         console.log("SUCCESS!", response);
         setValues({
@@ -47,43 +47,39 @@ const ContactForm = () => {
     }));
   };
   return (
-    <section>
-      <div className="container">
-        <h2>Send me a message!</h2>
-        {status && renderAlert()}
-        <form
-          onSubmit={handleSubmit}
-          className="--form-control --card --flex-center --dir-column"
-        >
-          <InputField
-            value={values.user_name}
-            handleChange={handleChange}
-            label="Full Name"
-            name="user_name"
-            type="text"
-            placeholder="John Doe"
-          />
+    <div className="container">
+      <h2>Send me a message!</h2>
 
-          <InputField
-            value={values.user_email}
-            handleChange={handleChange}
-            label="E-Mail"
-            name="user_email"
-            type="email"
-            placeholder="jphn@example.com"
-          />
+      {status && renderAlert()}
+      <form onSubmit={handleSubmit} className="--flex-center --dir-column">
+        <InputField
+          value={values.user_name}
+          handleChange={handleChange}
+          label="Name:"
+          name="user_name"
+          type="text"
+          placeholder="John Doe"
+        />
 
-          <TextareaField
-            value={values.message}
-            handleChange={handleChange}
-            name="message"
-          />
-          <button type="submit" className="--btn --btn -primary">
-            Send
-          </button>
-        </form>
-      </div>
-    </section>
+        <InputField
+          value={values.user_email}
+          handleChange={handleChange}
+          label="E-Mail:"
+          name="user_email"
+          type="email"
+          placeholder="jphn@example.com"
+        />
+
+        <TextareaField
+          value={values.message}
+          handleChange={handleChange}
+          name="message"
+        />
+        <button type="submit" className="--btn --btn -primary">
+          Send Message
+        </button>
+      </form>
+    </div>
   );
 };
 

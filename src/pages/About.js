@@ -20,31 +20,37 @@ export default function About() {
   };
   return (
     <main className="About">
-      <h2>About</h2>
       <div className="card-container">
         <div className="card-bg">
-          <p className="card-text">
-            Jag heter Niklas Pelli och är 35 år gammal. Född och uppvuxen i en
-            liten stad som heter Haparanda, ligger i norra delarna av landet.
-            Bott i Stockholm sedan 2011 och har musik som stor passion.På
-            fritiden spelar jag trummor i metalbandet Vometh. Men andra saker
-            som jag gillar är:
+          <p className="card-content">
+            <h2>About</h2>I am Niklas Pelli and I'm a creative individual
+            hailing from Northern Sweden, a region known for its stunning
+            landscapes and rich cultural heritage. My creativity likely finds
+            expression in various forms, whether it's through art, design,
+            music, or other outlets. Currently, I'm immersed in the world of web
+            development, a field that allows me to blend my technical skills
+            with my imaginative flair.I have a keen interest in technology and
+            its potential for creative expression. I enjoy the process of
+            building visually appealing and user-friendly websites, where I can
+            combine my artistic sensibilities with my technical prowess to craft
+            engaging digital experiences.
           </p>
           <p>
-            Vill du komma i kontakt med mig, gå in på fliken <b>"Kontakt"</b>
+            Get in touch with me by clicking on<b>"Contact"</b>
           </p>
+          <button
+            onClick={() => {
+              downloadFileAtURL(PDF_FILE_URL);
+            }}
+            className="--btn"
+          >
+            Download CV
+          </button>
         </div>
-
-        <img src={bild} className="img" alt="" />
+        <div className="card-img">
+          <img src={bild} className="img" alt="" />
+        </div>
       </div>
-      <button
-        onClick={() => {
-          downloadFileAtURL(PDF_FILE_URL);
-        }}
-        className="--btn --btn -primary"
-      >
-        Download CV
-      </button>
     </main>
   );
 }
