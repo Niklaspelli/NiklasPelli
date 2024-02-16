@@ -28,6 +28,7 @@ body {
 
 .site-title {
   font-size: 2rem;
+  font-weight: 900;
 
 }
 
@@ -48,7 +49,7 @@ body {
   padding: .25rem;
 }
 .nav li:active {
-  background-color: #1e1b1b;
+  background-color: #9c9696;
 }
 
 .nav li:hover {
@@ -77,11 +78,14 @@ body {
   background: black;
   color: orange;
   cursor: pointer;
-  display: flex;
+
   justify-content: center;
   align-items: center;
   transition: all 0.3s;
 }
+
+
+
 
 .--btn:hover {
   transform: translateY(-2px);
@@ -95,6 +99,10 @@ body {
   width: 100%;
 }
 
+.--about-btn{
+  position: relative;
+  left: 15%;
+}
 
 .--form-control {
 
@@ -104,19 +112,20 @@ body {
 
 
 .input{
-  position:relative;
+
+ 
   background: linear-gradient(#111111, #292929);
   color: orange;
   outline: none;
   appearance: none;
   border: none;
   box-shadow:  2px 2px 2px 2px orange;
-  margin: 15px;
+  margin: 10px;
  
   font-size: 1rem;
   font-weight: 300;
  height: 40px;
- width: 340px;
+ width: 310px;
   border: 1px solid #777;
   border-radius: 3px;
 }
@@ -133,29 +142,53 @@ textarea {
   box-sizing: border-box;
     resize: none;
     height: 200px;
+    width: 310px;
+    margin: 15px;
   
 }
-.--form-control label {
-  font-size: 1rem;
-  min-width: 4rem;
- 
-}
-.label, .h1, .h2{
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ .popup{
 
-}
+ color: green;
+ 
+} 
 
 .container {
   max-width: 1000px;
   margin: 0 auto;
   text-align: center;
+ 
 }
+.--column {
+ display:inline-block;
+  margin-top: 6px;
+  padding: 20px;
+  width: 350px;
+  height:425px;
+  align-content: center;
+  align-items: center;
+
+}
+
+
+
+.--form-control label {
+  font-size: 1rem;
+  min-width: 2rem;
+ 
+}
+.h1, .h2{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+
 
 /* Flex */
 .--flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
+ margin: 40px;
 }
 .--flex-start {
   display: flex;
@@ -218,23 +251,30 @@ h1{
 
 .typer{
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 26ch;
-  animation: typing 7s steps(26), blink 1s ease-in-out infinite;
+  width: 18ch;
+  animation: typing 7s steps(18), blink 1s ease-in-out infinite;
   overflow: hidden;
   white-space: nowrap;
   border-right: 4px solid orange;
 
 }
 
+.fade-logo {
+  font-size: 5rem;
+}
+
+
+
+
 @keyframes typing {
   from {
 width: 0ch;
   }
   to {
-    width: 26ch;
+    width: 18ch;
   }
 }
 
@@ -247,13 +287,13 @@ width: 0ch;
   }
 }
 
-.card-img, .fade-in-fade-out {
+.card-img, .fade-in-fade-out, .fade-logo {
   display:flex;
-  width: 400px;
+  width: 350px;
   height: 500px;
   border-radius: 10%;
   padding: 20px;
-  padding-bottom: 70px;
+  padding-bottom: 80px;
   -webkit-animation: fade-inout 7s;
    -moz-animation: fade-inout 7s;
    -o-animation: fade-inout 7s;
@@ -311,11 +351,12 @@ img{
   position:relative;
   top: 0;
   background-color: rgb(23, 22, 22);
-  padding: 20px;
+  padding: 10px;
   opacity: 95%;
   box-shadow: 15px 15px #523102;
   margin-top: 20px;
   margin-bottom: 20px;
+
 }
 
 .card-content {
@@ -325,11 +366,6 @@ text-align: center;
 }
 
 .glow {
-  
-  margin: 50px;
-  font-size: 70px;
-  color: #292929;
-  text-align: center;
   animation: glow 1s ease-in-out infinite alternate;
 }
 
@@ -351,11 +387,11 @@ text-align: center;
 
 @keyframes glow {
   from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #934305, 0 0 40px #b97113, 0 0 50px #bc2811, 0 0 60px #c05a0c, 0 0 70px #ee1212;
+    text-shadow: 0 0 5px #fff, 0 0 1px #fff, 0 0 5px #934305, 0 0 5px #b97113, 0 0 3px #bc2811, 0 0 2px #c05a0c, 0 0 2px #ee1212;
   }
   
   to {
-    text-shadow: 0 0 20px #a65252, 0 0 30px #ad5918, 0 0 40px #cb4210, 0 0 50px #db4711, 0 0 60px #363335, 0 0 70px #dbb708, 0 0 80px #131112;
+    text-shadow: 0 0 2px #a65252, 0 0 2px #ad5918, 0 0 2px #cb4210, 0 0 2px #db4711, 0 0 2px #363335, 0 0 2px #dbb708, 0 0 2px #131112;
   }
 }
 
@@ -374,12 +410,16 @@ text-align: center;
       place-content: center;  
 
   }
-  .typer{
-
-    font-size: 1.5rem; 
+   .typer {
+    font-size: 2rem; 
+    
   }
+   .fade-logo {
+    font-size: 3rem;
+   }
+  
   .glow {
-    font-size: 50px;
+    font-size: 2rem;
   }
   .--btn{
     margin-bottom: 80px;
@@ -398,19 +438,19 @@ text-align: center;
 
 @media screen and (min-width: 800px) {
 
-  .typer{
+  .typer, .fade-logo{
 
     font-size: 5rem; 
   }
   .glow {
   
-    font-size: 70px;
+    font-size: 5rem;
   }
+
+  
 }
 
 
-.popup{
 
- color: green;
- 
-}
+
+

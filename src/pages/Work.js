@@ -1,6 +1,15 @@
-import React, { useState } from "react";
+import React /* , { useState } */ from "react";
 
-function Popup() {
+export default function Work() {
+  return (
+    <main className="Work">
+      <h2>My work</h2>
+      <p style={{ marginTop: "1rem" }}>This page is under construction...</p>
+    </main>
+  );
+}
+
+/* function Popup() {
   const [showPopup, setShowPopup] = useState(false);
 
   const togglePopup = () => {
@@ -25,15 +34,6 @@ function Popup() {
       )}
     </div>
   );
-}
-
-export default Popup;
-
-/* export default function Work() {
-  return (
-    <main className="Work">
-      <h2>My work</h2>
-      <p style={{ marginTop: "1rem" }}>Här ska det stå nåt.</p>
-    </main>
-  );
 } */
+
+/* export default Popup; */

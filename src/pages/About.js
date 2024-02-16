@@ -23,17 +23,19 @@ export default function About() {
       <div className="card-container">
         <div className="card-bg">
           <p className="card-content">
-            <h2>About</h2>I am Niklas Pelli and I'm a creative individual
+            <h2>About</h2>I am <b>Niklas Pelli</b>, a creative individual
             hailing from Northern Sweden, a region known for its stunning
-            landscapes and rich cultural heritage. My creativity likely finds
-            expression in various forms, whether it's through art, design,
-            music, or other outlets. Currently, I'm immersed in the world of web
+            landscapes and rich cultural heritage. My creativity finds
+            expression in various forms, whether it's through design, music, or
+            other outlets. Currently, I'm immersed in the world of web
             development, a field that allows me to blend my technical skills
-            with my imaginative flair.I have a keen interest in technology and
+            with my imaginative flair. I have a keen interest in technology and
             its potential for creative expression. I enjoy the process of
             building visually appealing and user-friendly websites, where I can
             combine my artistic sensibilities with my technical prowess to craft
-            engaging digital experiences.
+            engaging digital experiences. As a <b>team player</b>, I thrive in
+            collaborative environments, valuing the diverse perspectives and
+            skills that each team member brings to the table.
           </p>
           <p>
             Get in touch with me by clicking on<b>"Contact"</b>
@@ -42,7 +44,7 @@ export default function About() {
             onClick={() => {
               downloadFileAtURL(PDF_FILE_URL);
             }}
-            className="--btn"
+            className="--btn --btn-contact"
           >
             Download CV
           </button>

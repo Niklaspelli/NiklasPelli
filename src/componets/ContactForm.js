@@ -15,21 +15,23 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    emailjs.send("service_secret", "template_secret", values, "secret").then(
-      (response) => {
-        console.log("SUCCESS!", response);
-        setValues({
-          fullName: "",
-          email: "",
-          role: "",
-          message: "",
-        });
-        setStatus("SUCCESS");
-      },
-      (error) => {
-        console.log("FAILED...", error);
-      }
-    );
+    emailjs
+      .send("service_iwtg0ga", "template_v8sjwh1", values, "RGZGJ9e24vn_ShfG3")
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response);
+          setValues({
+            fullName: "",
+            email: "",
+            role: "",
+            message: "",
+          });
+          setStatus("SUCCESS");
+        },
+        (error) => {
+          console.log("FAILED...", error);
+        }
+      );
   };
 
   useEffect(() => {
@@ -48,10 +50,11 @@ const ContactForm = () => {
   };
   return (
     <div className="container">
-      <h2>Send me a message!</h2>
-
       {status && renderAlert()}
-      <form onSubmit={handleSubmit} className="--flex-center --dir-column">
+
+      <form onSubmit={handleSubmit} className="--dir-column --column">
+        {" "}
+        <h2>Send me a message!</h2>
         <InputField
           value={values.user_name}
           handleChange={handleChange}
@@ -60,7 +63,6 @@ const ContactForm = () => {
           type="text"
           placeholder="John Doe"
         />
-
         <InputField
           value={values.user_email}
           handleChange={handleChange}
@@ -69,13 +71,13 @@ const ContactForm = () => {
           type="email"
           placeholder="jphn@example.com"
         />
-
         <TextareaField
           value={values.message}
           handleChange={handleChange}
+          label="Message:"
           name="message"
         />
-        <button type="submit" className="--btn --btn -primary">
+        <button type="submit" className="--btn">
           Send Message
         </button>
       </form>
