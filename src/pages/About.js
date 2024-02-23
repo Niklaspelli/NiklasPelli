@@ -23,7 +23,14 @@ export default function About() {
       <div className="card-container">
         <div className="card-bg">
           <p className="card-content">
-            <h2>About</h2>I am <b>Niklas Pelli</b>, a creative individual
+            <h2>About</h2>I am <b>Niklas Pelli</b>, born and raised in northern
+            Sweden, from a small town called Haparanda. Currently studying
+            "Front-end Cyber Sercurity" at Jensen Yrkeshögskola in Kista,
+            Stockholm.
+            <br></br> My creativity finds expression in various forms, whether
+            it's through web design, music, or other outlets. I am a{" "}
+            <b>team player</b> at heart and love to bounce ideas with others!
+            {/* a creative individual
             hailing from Northern Sweden, a region known for its stunning
             landscapes and rich cultural heritage. My creativity finds
             expression in various forms, whether it's through design, music, or
@@ -35,10 +42,11 @@ export default function About() {
             combine my artistic sensibilities with my technical prowess to craft
             engaging digital experiences. As a <b>team player</b>, I thrive in
             collaborative environments, valuing the diverse perspectives and
-            skills that each team member brings to the table.
+            skills that each team member brings to the table. */}
           </p>
           <p>
-            Get in touch with me by clicking on<b>"Contact"</b>
+            Download my CV below or get in touch with me by clicking on
+            <b>"Contact"</b>
           </p>
           <button
             onClick={() => {

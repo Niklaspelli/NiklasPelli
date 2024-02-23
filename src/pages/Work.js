@@ -4,7 +4,10 @@ export default function Work() {
   return (
     <main className="Work">
       <h2>My work</h2>
-      <p style={{ marginTop: "1rem" }}>This page is under construction...</p>
+      <p style={{ marginTop: "1rem" }}>
+        I will put my work here eventually, but check out my Github meanwhile by
+        clicking on the icon below!
+      </p>
     </main>
   );
 }
