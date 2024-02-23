@@ -1,6 +1,6 @@
 import bild from "./img/Niklas.jpg";
 
-const PDF_FILE_URL = "http://localhost:3000/Niklas_Pelli_CV.pdf";
+const PDF_FILE_URL = "./Niklas_Pelli_CV.pdf";
 
 export default function About() {
   const downloadFileAtURL = (url) => {
