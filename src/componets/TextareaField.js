@@ -9,6 +9,7 @@ const TextareaField = (props) => {
         cols="45"
         rows="10"
         value={value}
+        style={{ color: "orange" }}
       >
         Your message
       </textarea>

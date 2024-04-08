@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import InputField from "./InputField";
 import TextareaField from "./TextareaField";
-
+import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import "../styles.css";
 import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
@@ -49,39 +50,65 @@ const ContactForm = () => {
     }));
   };
   return (
-    <div className="container">
+    <Container>
       {status && renderAlert()}
-
-      <form onSubmit={handleSubmit} className="--dir-column --column">
+      <Row className="justify-content-center align-items-center h-100">
         {" "}
-        <h2>Send me a message!</h2>
-        <InputField
-          value={values.user_name}
-          handleChange={handleChange}
-          label="Name:"
-          name="user_name"
-          type="text"
-          placeholder="John Doe"
-        />
-        <InputField
-          value={values.user_email}
-          handleChange={handleChange}
-          label="E-Mail:"
-          name="user_email"
-          type="email"
-          placeholder="jphn@example.com"
-        />
-        <TextareaField
-          value={values.message}
-          handleChange={handleChange}
-          label="Message:"
-          name="message"
-        />
-        <button type="submit" className="--btn">
-          Send Message
-        </button>
-      </form>
-    </div>
+        <h2 style={{ color: "orange" }}>Send me a message!</h2>
+        <Col md={6} lg={4} className="justify-content-center">
+          <label style={{ color: "orange" }}>Name:</label>
+          <Form.Floating className="mb-1" inline>
+            {" "}
+            <InputField
+              value={values.user_name}
+              handleChange={handleChange}
+              name="user_name"
+              type="text"
+              placeholder="John Doe"
+            />
+          </Form.Floating>
+          <label style={{ color: "orange" }}>E-mail:</label>
+          <Form.Floating className="mb-1" inline>
+            {" "}
+            <InputField
+              value={values.user_email}
+              handleChange={handleChange}
+              name="user_email"
+              type="email"
+              placeholder="jphn@example.com"
+            />
+          </Form.Floating>
+          <label style={{ color: "orange" }}>Message:</label>
+          <Form.Floating
+            className="mb-1"
+            inline
+            style={{
+              color: "orange",
+            }}
+          >
+            <TextareaField
+              value={values.message}
+              handleChange={handleChange}
+              name="message"
+            />
+          </Form.Floating>
+          <Button
+            className="--btn"
+            type="submit"
+            style={{
+              background: "black",
+              border: "1px solid orange",
+              color: "orange",
+              padding: "6px 8px",
+              margin: "20px",
+            }}
+            onClick={(e) => handleSubmit(e)}
+          >
+            Send
+          </Button>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 

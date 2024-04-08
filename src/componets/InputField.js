@@ -4,11 +4,11 @@ const InputField = (props) => {
     <section>
       <label htmlFor={name}>{label}</label>
       <input
-        className="input"
         type={type}
         onChange={handleChange}
         value={value}
         name={name}
+        style={{ color: "orange" }}
         required
       />
     </section>
