@@ -197,7 +197,7 @@ footer {
   height: 4rem;
   background-color: #0a0a0a;
   margin: 0;
-  margin-top: 40px;
+  margin-top: 0px;
   scroll-padding-block-end: 100%;
 }
 
@@ -339,7 +339,9 @@ text-align: center;
  align-content: center;
  padding: 1px;
 
+
 }
+
 
 .glow {
   animation: glow 1s ease-in-out infinite alternate;
@@ -380,7 +382,7 @@ text-align: center;
   }
 }
 
-@media screen and (min-width: 360px) {
+@media screen and (min-width: 375px) {
 
   .flexbox{
       place-content: center;  
