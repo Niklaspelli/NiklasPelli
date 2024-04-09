@@ -1,5 +1,6 @@
 import { Container, Col, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { motion } from "framer-motion";
 import {
   faReact,
   faCss3Alt,
@@ -13,21 +14,26 @@ import { styled } from "styled-components";
 export default function Home() {
   return (
     <Container>
-      <div className="fade-logo" style={{ color: "orange" }}>
-        Creative{" "}
-      </div>
-      <div className="typer">
-        <div className="glow">Frontend Developer...</div>
-      </div>
       <Row className="justify-content-center align-items-center h-100">
         <Col>
-          <Card>
+          <div className="fade-logo" style={{ color: "orange" }}>
+            Creative{" "}
+          </div>
+          <div className="typer">
+            <div className="glow">Frontend Developer...</div>
+          </div>
+          <Card
+            animate={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
+            exit={{ opacity: 1 }}
+            transition={{ duration: 15 }}
+          >
             <div className="skills">
               <FontAwesomeIcon
                 icon={faReact}
                 style={{
                   color: "cyan",
-                  fontSize: "3.5rem",
+
                   margin: "10",
                 }}
               />
@@ -35,7 +41,7 @@ export default function Home() {
                 icon={faCss3Alt}
                 style={{
                   color: "blue",
-                  fontSize: "3.5rem",
+
                   margin: "10",
                 }}
               />
@@ -44,7 +50,7 @@ export default function Home() {
                 icon={faJs}
                 style={{
                   color: "yellow",
-                  fontSize: "3.5rem",
+
                   margin: "10",
                 }}
               />
@@ -52,7 +58,7 @@ export default function Home() {
                 icon={faNodeJs}
                 style={{
                   color: "green",
-                  fontSize: "3.5rem",
+
                   margin: "10",
                 }}
               />
@@ -60,7 +66,7 @@ export default function Home() {
                 icon={faHtml5}
                 style={{
                   color: "orange",
-                  fontSize: "3.5rem",
+
                   margin: "10",
                 }}
               />
@@ -72,14 +78,11 @@ export default function Home() {
   );
 }
 
-const Card = styled.div`
+const Card = styled(motion.div)`
   .skills {
     display: flex;
     position: relative;
-    top: -50px;
+    margin-bottom: 20px;
     place-content: center;
-    margin: 1rem;
-    opacity: 50%;
-  }
   }
 `;
