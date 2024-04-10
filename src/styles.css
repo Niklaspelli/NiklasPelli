@@ -20,6 +20,7 @@ body {
   background-color: #0a0a0a;
   color: orange;
   display: flex;
+ 
   justify-content: space-between;
   align-items: stretch;
   gap: 2rem;
@@ -33,6 +34,7 @@ body {
 }
 
 .nav ul {
+  
   padding: 0;
   margin: 0;
   list-style: none;
@@ -41,20 +43,43 @@ body {
 }
 
 .nav a {
-  color: inherit;
+  color: inherit; 
+  position: relative;
   text-decoration: none;
   height: 100%;
   display: flex;
   align-items: center;
   padding: .25rem;
 }
-.nav li:active {
-  background-color: #9c9696;
+
+ 
+ .nav li:hover {
+  color: rgb(23, 23, 22)rgb(145, 102, 23)
+} 
+
+li {
+  position: relative;
+  margin: 0;
 }
 
-.nav li:hover {
-  background-color: #171616;
+.nav li::after {
+  content: '';
+  height: 2px;
+  width: 100%;
+  background: orange;
+  position: absolute;
+
+  left: 0;
+ bottom: 10px;
+  opacity: 0;
+  transition: all 0.2s;
+  pointer-events: none;
+
 }
+  .nav li:hover::after {
+  opacity: 1;
+} 
+ 
 
 .--text-center {
   text-align: center;
@@ -223,11 +248,18 @@ h1{
   overflow: hidden;
   white-space: nowrap;
   border-right: 4px solid orange;
+  display: flex;
 
 }
 
 .fade-logo {
   font-size: 5rem;
+ display: flex;
+  
+  -webkit-animation: fade-inout 7s;
+  -moz-animation: fade-inout 7s;
+  -o-animation: fade-inout 7s;
+   animation: fade-inout 7s;
 }
 
 
@@ -251,7 +283,7 @@ width: 0ch;
   }
 }
 
-.card-img, .fade-in-fade-out, .fade-logo {
+.card-img, .fade-in-fade-out{
   display:flex;
   width: 350px;
   height: 500px;
@@ -345,6 +377,18 @@ text-align: center;
 }
 
 
+.b-line:hover {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 35%;
+  background: linear-gradient(90deg, var(--pink) 0%, transparent 100%);
+  bottom: 0;
+  left: 0;
+  transition-duration: 300ms;
+}
+
+
 @keyframes glow {
   from {
     text-shadow: 0 0 5px #fff, 0 0 1px #fff, 0 0 5px #934305, 0 0 5px #b97113, 0 0 3px #bc2811, 0 0 2px #c05a0c, 0 0 2px #ee1212;
@@ -398,8 +442,7 @@ text-align: center;
 
   .skills {
     font-size: 4rem;
-    margin: 1rem;
-   
+
   }
 
   

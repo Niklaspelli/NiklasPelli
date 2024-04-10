@@ -22,6 +22,7 @@ export default function Home() {
           <div className="typer">
             <div className="glow">Frontend Developer...</div>
           </div>
+        
           <Card
             animate={{ opacity: 1 }}
             initial={{ opacity: 0 }}
@@ -82,7 +83,8 @@ const Card = styled(motion.div)`
   .skills {
     display: flex;
     position: relative;
-    margin-bottom: 20px;
+    top: 24rem;
+    
     place-content: center;
   }
 `;
