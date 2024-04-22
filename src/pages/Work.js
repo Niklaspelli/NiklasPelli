@@ -1,5 +1,6 @@
 import { Container } from "react-bootstrap";
 import YouTubeVideo from '../componets/YoutubeVideo';
+import "../styles.css";
 
 export default function Work() {
   return (
@@ -10,10 +11,10 @@ export default function Work() {
           Here is a sample of a webshop I'm currently working on! Here I'm using React and Node.js as backend.
         </p>
            <YouTubeVideo />
-<p>Src code: <a href="https://github.com/Niklaspelli/WebshopProject/tree/main">Amazing shirts!</a></p>
-        
+           <div className="src-code">
+         <p>Src code: <a href="https://github.com/Niklaspelli/WebshopProject/tree/main" className="workLink">Amazing shirts!</a></p>
+        </div>
       </main>
-     
-    </Container>
+      </Container>
   );
 }
