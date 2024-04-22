@@ -1,4 +1,5 @@
 import { Container } from "react-bootstrap";
+import YouTubeVideo from '../componets/YoutubeVideo';
 
 export default function Work() {
   return (
@@ -6,10 +7,13 @@ export default function Work() {
       <main className="Work" style={{ color: "orange" }}>
         <h2>My work</h2>
         <p style={{ marginTop: "1rem" }}>
-          I'll put my work here eventually, but check out my Github meanwhile by
-          clicking on the icons below!
+          Here is a sample of a webshop I'm currently working on! Here I'm using React and Node.js as backend.
         </p>
+           <YouTubeVideo />
+<p>Src code: <a href="https://github.com/Niklaspelli/WebshopProject/tree/main">Amazing shirts!</a></p>
+        
       </main>
+     
     </Container>
   );
 }
