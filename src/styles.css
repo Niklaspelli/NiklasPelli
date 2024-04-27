@@ -677,8 +677,10 @@ img {
 
   .skills {
     font-size: 4rem;
+  }
 
-
+  .progress-value {
+    margin-bottom: 60px;
   }
 
 
