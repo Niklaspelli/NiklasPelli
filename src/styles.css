@@ -6,7 +6,7 @@
 
 body {
   margin: 0;
-  min-height: 125vh;
+  max-height: 100%;
   font-size: 18px;
   background: linear-gradient(#111111, #292929);
   background-size: cover;
@@ -76,7 +76,6 @@ li {
   width: 100%;
   background: orange;
   position: absolute;
-
   left: 0;
   bottom: 10px;
   opacity: 0;
@@ -88,7 +87,6 @@ li {
 .nav li:hover::after {
   opacity: 1;
 }
-
 
 .--text-center {
   text-align: center;
@@ -112,14 +110,10 @@ li {
   background: black;
   color: orange;
   cursor: pointer;
-
   justify-content: center;
   align-items: center;
   transition: all 0.3s;
 }
-
-
-
 
 .--btn:hover {
   transform: translateY(-2px);
@@ -143,11 +137,7 @@ li {
   font-weight: 300;
 }
 
-
-
 input {
-
-
   background: linear-gradient(#111111, #292929);
   color: orange;
   outline: none;
@@ -168,9 +158,7 @@ input::focus {
   background: linear-gradient(#111111, #292929);
 }
 
-
 textarea {
-
   background: linear-gradient(#111111, #292929);
   outline: none;
   appearance: none;
@@ -216,7 +204,6 @@ textarea {
 
 }
 
-
 footer {
   position: fixed;
   bottom: 0;
@@ -228,7 +215,6 @@ footer {
   margin-top: 0px;
   scroll-padding-block-end: 100%;
 }
-
 
 .fa-brands {
   color: orange;
@@ -277,8 +263,6 @@ h1 {
   animation: fade-inout 7s;
 }
 
-
-
 .circle-wrap {
 
 
@@ -313,7 +297,6 @@ h1 {
   background-color: cyan;
 }
 
-
 .mask.full-1,
 .circle .fill-1 {
   animation: fill-1 ease-in-out 3s;
@@ -334,7 +317,6 @@ h1 {
   clip: rect(0px, 75px, 170px, 0px);
   background-color: blue;
 }
-
 
 .mask.full-2,
 .circle .fill-2 {
@@ -374,12 +356,10 @@ h1 {
   }
 }
 
-
 .mask .fill-4 {
   clip: rect(0px, 75px, 170px, 0px);
   background-color: green;
 }
-
 
 .mask.full-4,
 .circle .fill-4 {
@@ -433,7 +413,7 @@ h1 {
   position: absolute;
   margin-top: 20px;
   margin-left: 20px;
-  /*   z-index: 80; */
+  z-index: 80;
   font-size: 0.2em;
   font-weight: 700;
   color: orange;
